@@ -8,7 +8,9 @@ import 'package:ticket_app/base/res/widgets/text_style_fourth.dart';
 import 'package:ticket_app/base/res/widgets/text_style_third.dart';
 
 class TicketView extends StatelessWidget {
-  const TicketView({super.key});
+  final Map<String, dynamic> ticket;
+  final bool wholeScreen;
+  const TicketView({super.key, required this.ticket, this.wholeScreen = false});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,7 @@ class TicketView extends StatelessWidget {
       width: size.width * 0.85,
       height: 189,
       child: Container(
-        margin: const EdgeInsets.only(right: 16),
+        margin: EdgeInsets.only(right: wholeScreen == true ? 0 : 16),
         child: Column(
           children: [
             // Blue Part of Ticket
@@ -34,8 +36,8 @@ class TicketView extends StatelessWidget {
                   // Sowing depature and destination with icons first line
                   Row(
                     children: [
-                      const TextStyleThird(
-                        text: 'NYC',
+                      TextStyleThird(
+                        text: ticket["from"]["code"],
                       ),
                       Expanded(child: Container()),
                       const BigDot(),
@@ -62,8 +64,8 @@ class TicketView extends StatelessWidget {
                       ),
                       const BigDot(),
                       Expanded(child: Container()),
-                      const TextStyleThird(
-                        text: 'LDN',
+                      TextStyleThird(
+                        text: ticket["to"]["code"],
                       ),
                     ],
                   ),
@@ -73,21 +75,21 @@ class TicketView extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      const SizedBox(
+                      SizedBox(
                         width: 100,
                         child: TextStyleFourth(
-                          text: 'New-York',
+                          text: ticket["from"]["name"],
                         ),
                       ),
                       Expanded(child: Container()),
-                      const TextStyleFourth(
-                        text: '8H 30M',
+                      TextStyleFourth(
+                        text: ticket["flying_time"],
                       ),
                       Expanded(child: Container()),
-                      const SizedBox(
+                      SizedBox(
                         width: 100,
                         child: TextStyleFourth(
-                          text: 'London',
+                          text: ticket["to"]["name"],
                           align: TextAlign.end,
                         ),
                       )
@@ -124,7 +126,7 @@ class TicketView extends StatelessWidget {
                     bottomLeft: Radius.circular(21),
                     bottomRight: Radius.circular(21),
                   )),
-              child: const Column(
+              child: Column(
                 children: [
                   // Sowing depature and destination with icons first line
                   Row(
@@ -132,17 +134,17 @@ class TicketView extends StatelessWidget {
                     children: [
                       AppColumnTextLayout(
                         alignment: CrossAxisAlignment.start,
-                        topText: '1 May',
+                        topText: ticket["date"],
                         bottomText: 'DATE',
                       ),
                       AppColumnTextLayout(
                         alignment: CrossAxisAlignment.center,
-                        topText: '08:00 AM',
+                        topText: ticket["departure_time"],
                         bottomText: 'Departure time',
                       ),
                       AppColumnTextLayout(
                         alignment: CrossAxisAlignment.end,
-                        topText: '23',
+                        topText: ticket["number"].toString(),
                         bottomText: 'Number',
                       ),
                     ],
