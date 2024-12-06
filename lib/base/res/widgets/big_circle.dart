@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class BigCircle extends StatelessWidget {
-  final isRight;
-  const BigCircle({super.key, this.isRight});
+  final bool isRight;
+  const BigCircle({super.key, required this.isRight});
 
   @override
   Widget build(BuildContext context) {
