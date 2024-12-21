@@ -25,9 +25,10 @@ class Hotels extends StatelessWidget {
               color: AppStyles.primaryColor,
               borderRadius: BorderRadius.circular(12),
               image: DecorationImage(
-                  fit: BoxFit.cover,
-                  // assets/images${hotel['image']}
-                  image: AssetImage("assets/images${hotel['image']}")),
+                fit: BoxFit.cover,
+                // assets/images${hotel['image']}
+                image: AssetImage("assets/images/${hotel['image']}"),
+              ),
             ),
           ),
           const SizedBox(
