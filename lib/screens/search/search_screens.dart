@@ -4,6 +4,7 @@ import 'package:ticket_app/base/res/widgets/app_double_text.dart';
 import 'package:ticket_app/screens/search/widgets/app_text_icon.dart';
 import 'package:ticket_app/screens/search/widgets/app_ticket_tabs.dart';
 import 'package:ticket_app/screens/search/widgets/find_tickets.dart';
+import 'package:ticket_app/screens/search/widgets/ticket_promotion.dart';
 
 class SearchScreens extends StatelessWidget {
   const SearchScreens({super.key});
@@ -25,7 +26,10 @@ class SearchScreens extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          const AppTicketTabs(),
+          const AppTicketTabs(
+            firstTab: 'Airline Tickets',
+            secondTab: 'Hotels',
+          ),
           const SizedBox(
             height: 25,
           ),
@@ -55,6 +59,7 @@ class SearchScreens extends StatelessWidget {
           const SizedBox(
             height: 15,
           ),
+          const TicketPromotion(),
         ],
       ),
     );
