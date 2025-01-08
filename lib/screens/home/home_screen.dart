@@ -105,7 +105,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 AppDoubleText(
                   bigText: "Hotels",
                   smallText: "View all",
-                  func: () => Navigator.pushNamed(context, "/all_tickets"),
+                  func: () => Navigator.pushNamed(context, "/all_hotels"),
                 ),
                 const SizedBox(
                   height: 20,
