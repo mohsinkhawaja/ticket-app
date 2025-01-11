@@ -1,6 +1,10 @@
 # ticket_app
 
-A new Flutter project.
+UI Screen of Ticket App.
+Contain Basic flutter widgets
+Reuseable widgets
+Routes
+Fetching data from API
 
 ## Getting Started
 
