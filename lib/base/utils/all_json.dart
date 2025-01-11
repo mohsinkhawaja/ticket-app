@@ -37,18 +37,24 @@ List<Map<String, dynamic>> hotelList = [
     'image': 'city_view.png',
     'place': 'Open Space',
     'destination': 'London',
-    'price': 25
+    'price': 25,
+    'description':
+        'A serene open space in London, perfect for relaxing and enjoying nature.'
   },
   {
     'image': 'pool_view.png',
     'place': 'Global Will',
     'destination': 'London',
-    'price': 40
+    'price': 40,
+    'description':
+        'An upscale location in London with a stunning pool view and premium amenities.'
   },
   {
     'image': 'hotel_room.png',
     'place': 'Tallest Building',
     'destination': 'Dubai',
-    'price': 68
+    'price': 68,
+    'description':
+        'Experience luxury in Dubai at the tallest building with world-class facilities.'
   },
 ];
