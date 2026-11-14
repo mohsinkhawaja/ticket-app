@@ -1,4 +1,3 @@
-import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:ticket_app/screens/home/home_screen.dart';
 import 'package:ticket_app/screens/search/search_screens.dart';
@@ -39,20 +38,20 @@ class _BottomNavBarState extends State<BottomNavBar> {
           showSelectedLabels: false,
           items: const [
             BottomNavigationBarItem(
-                icon: Icon(FluentSystemIcons.ic_fluent_home_regular),
-                activeIcon: Icon(FluentSystemIcons.ic_fluent_home_filled),
+                icon: Icon(Icons.home_outlined),
+                activeIcon: Icon(Icons.home),
                 label: "Home"),
             BottomNavigationBarItem(
-                icon: Icon(FluentSystemIcons.ic_fluent_search_regular),
-                activeIcon: Icon(FluentSystemIcons.ic_fluent_search_filled),
+                icon: Icon(Icons.search_outlined),
+                activeIcon: Icon(Icons.search),
                 label: "Search"),
             BottomNavigationBarItem(
-                icon: Icon(FluentSystemIcons.ic_fluent_ticket_regular),
-                activeIcon: Icon(FluentSystemIcons.ic_fluent_ticket_filled),
+                icon: Icon(Icons.confirmation_number_outlined),
+                activeIcon: Icon(Icons.confirmation_number),
                 label: "Tickets"),
             BottomNavigationBarItem(
-                icon: Icon(FluentSystemIcons.ic_fluent_person_regular),
-                activeIcon: Icon(FluentSystemIcons.ic_fluent_person_filled),
+                icon: Icon(Icons.person_outline),
+                activeIcon: Icon(Icons.person),
                 label: "Profile"),
           ]),
     );

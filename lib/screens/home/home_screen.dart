@@ -1,4 +1,3 @@
-import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:ticket_app/base/res/media.dart';
 import 'package:ticket_app/base/res/styles/app_styles.dart';
@@ -71,7 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: const Row(
                     children: [
                       Icon(
-                        FluentSystemIcons.ic_fluent_search_regular,
+                        Icons.search_outlined,
                         color: Color(0xffbfc025),
                       ),
                       Text("Search"),
